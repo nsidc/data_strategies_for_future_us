@@ -7,6 +7,7 @@
 
 Data Strategies for a Future Us is a guide for scientists on how to document, organize and manage data processing workflows.
 
+[Data Strategies for a Future Us](summary.html)
 
 ## Level of Support
 
