@@ -4,27 +4,15 @@ author: "Andy P. Barrett"
 date: last-modified
 date-format: iso
 format:
-    html:
-        toc: true
-        colorlinks: true
     revealjs:
         colorlinks: true
 ---
 
-## Introduction
-
-We are all data wranglers or data scientists.  It is our job to
-collect data, process data, analyse data and generate results in the
-forms of plots, tables and eventually new knowledge.  In the past,
-many of us have done this work in isolation, we store data on our
-laptops, sharing files by email or dropbox, google drive, etc as
-needed.  This approach has mostly worked.  However, more
-collaborative, and more open and reproducible ways of working, as well
-as increases in data volumes, and ways of accessing data requires us
-to find new, or at least modified, data strategies.
-
-
 ## What are Data Strategies?
+
+I'm defining Data Strategies broadly to include workflows, and data
+management norms and best practices that enhance collaboration and
+reproducible science.
 
 Collaborating with a research team or the wider scientific community
 requires us to solve problems of data access and share knowledge about
