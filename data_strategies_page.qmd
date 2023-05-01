@@ -7,8 +7,6 @@ format:
     html:
         toc: true
         colorlinks: true
-    revealjs:
-        colorlinks: true
 ---
 
 ## Introduction
