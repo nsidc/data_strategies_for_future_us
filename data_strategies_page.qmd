@@ -7,6 +7,8 @@ format:
     html:
         toc: true
         colorlinks: true
+    revealjs:
+        colorlinks: true
 ---
 
 ## Introduction
@@ -74,6 +76,12 @@ Depends on data volume:
  - Do you have the computing power for processing;  
  - Does your team need a common computing environment;  
  - Do you need to share data at each step or just an end product.  
+
+
+## What does this look like in the cloud?
+
+*Placeholder for examples of hybrid and cloud workflows*
+
 
 ## How to future-proof workflows and make them reproducible
 
