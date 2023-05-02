@@ -1,71 +1,111 @@
 ---
 title: "Data Strategies for a Future Us"
-author: "Andy P. Barrett"
+author: "Andy P. Barrett, National Snow and Ice Data Center"
 date: last-modified
 date-format: iso
 format:
     revealjs:
         colorlinks: true
+        theme: dark
+        
 ---
 
 ## What are Data Strategies?
 
-I'm defining Data Strategies broadly to include workflows, and data
-management norms and best practices that enhance collaboration and
-reproducible science.
-
-Collaborating with a research team or the wider scientific community
-requires us to solve problems of data access and share knowledge about
-how data was analyzed.  How do we make data available to others?  Howa.
-do we document the processing steps?  Can you remember how a dataset
-you processed last week was cleaned?  If your computer crashes or
-get's stolen could you reproduce your processing workflow easily?
-When it comes to submit a paper, finish a project, hand off to someone
-else on the team, or pick up a project after vacation; how easy is it
-to do this.  Data strategies, used in this context, is a catchall term
-that includes where to process data (locally or on a remote system),
-how to document and manage data processing for a future you or others,
-how to make this data accessible to others, how to make the processing
-and analysis workflows reproducible.
+Data Strategies enhance collaboration and reproducible science.
 
 
-## Who is a future us?
+ - Workflows;  
+ - Data management best practices;  
+ - Documentation;  
 
-A future us is first and foremost, you tomorrow or next week when you
-pick up a project again, you next month when you discover you discover
-a problem with the data, or in siz months to a year from now when
-"reviewer 2" requests major changes.  It is other members of your team
-who might want to work with the data and want to know where it came
-from and how it was processed.  And it is the wider scientific
-community who may want to reproduce your work.
 
+Good to start from the beginning of a project, great to start
+from where you now.
+
+
+## Who is future us?
+
+:::: {.columns}  
+::: {.column}  
+You.
+
+Your team.
+
+The scientific community.
+:::  
+
+::: {.column}
+![](images/starwars-teamwork.png)
+:::
+::::
 
 ## A simple data workflow
-```{mermaid}
-flowchart TD
-    A["Collect Data
-    Field, Remote Sensing, Model"] -->B[Clean Data\nCalibration, QC, Reprojection] -->C[Aggregate\nTime or spatial means] -->D[Analysis] -->E[Make Plots and Tables] -->F[Write Manuscript]
-    F-- Review -->B
-    E-- Iterate-->C
+![http://r4ds.hadley.nz/](images/data-science-workflow.png)
+
+
+## When to cloud?
+
+ - What is the data volume?
+ - How long will it take to download?
+ - Can you store all that data (cost and space)?  
+ - Do you have the computing power for processing?  
+ - Does your team need a common computing environment?  
+ - Do you need to share data at each step or just an end product?  
+
+
+## Solutions
+```{dot -Tpng}
+digraph LocalWorkflow {
+  fontname="Helvetica,Arial,sans-serif"
+  cloud [image="images/cloud_image.png", label="EarthData Cloud"];
+  tidy [shape=plaintext, label="Tidy"];
+  transform [shape=plaintext, label="Transform"];
+  visualize [shape=plaintext, label="Visualize"];
+  model [shape=plaintext, label="Model"];
+  communicate [shape=plaintext, label="Communicate"];
+  
+  cloud -> tidy;
+
+  subgraph LaptopCluster {
+      label="Local Machine";
+      style=filled;
+      color=lightgrey;
+      tidy -> transform -> visualize -> model -> transform;
+  }
+      
+}
 ```
-
-
-## Collaborative and reproducible workflows
-
-### Where to process data?
+  
+Add cloud and other workflow diagrams
 
  - Download data to Local Machine and process locally
  - Do some processing in cloud to reduce data size
  - Do all of your processing in the cloud
 
-Depends on data volume:  
- - how long will it take to download (Mbps);  
- - Can you store all that data (cost and space);  
- - Do you have the computing power for processing;  
- - Does your team need a common computing environment;  
- - Do you need to share data at each step or just an end product.  
 
+## Test Diagram
+```{dot}
+digraph G {
+	fontname="Helvetica,Arial,sans-serif"
+	node [fontname="Helvetica,Arial,sans-serif"]
+	edge [fontname="Helvetica,Arial,sans-serif"]
 
+	subgraph cluster_0 {
+		style=filled;
+		color=lightgrey;
+		node [shape=plaintext, style=filled,color=white];
+		Tidy -> Transform -> Visualize -> Model -> Transform;
+		label = "Local Machine";
+	}
+
+        cloud -> Tidy [label="Import", labelfloat=true];
+        Model -> communicate;
+        
+	communicate [shape=plaintext, label="Communicate"];
+        cloud [shape=plaintest, label="Cloud"];
+}
+```
 ## What does this look like in the cloud?
 
 *Placeholder for examples of hybrid and cloud workflows*
@@ -73,32 +113,45 @@ Depends on data volume:
 
 ## How to future-proof workflows and make them reproducible
 
-**FAIR** - **F**indable, **A**ccessible, **I**nteroperable, **R**eusable applies to
-  the future you and your tean as well.
+**FAIR**
+
+ - **F**indable,
+ - **A**ccessible,
+ - **I**nteroperable,
+ - **R**eusable
+
+Applies to the future you and your team as well.
+
 
 ## Document the Analysis
 
-Document each step.  Where did you get the data, which files, which version.  Write it down.  Anywhere is good but using a script is better.
-Example: `earthaccess`, `wget` or `curl`
+Document each step.
 
-Can you (or anyone else) easily reproduce your processing pipeline.  Having it scripted so just a few commands can set the process going is really helpful.
+ - Where did you get the data, which files, which version?
+ - Write it down.  Anywhere is good but using a script is better.
+   Example: `earthaccess`, `wget` or `curl`
 
-How can this be done with GUI interfaces? E.g. ArcGIS, QGIS, Excel - screenshots, journal commands.
+Can you (or anyone else) easily reproduce your processing pipeline?
+
+With GUI interfaces - e.g. ArcGIS, QGIS, Excel - use screenshots, journal commands.
+
 
 ## Make sure data are **F**indable and **A**ccessible
 
-Does everyone know where you data is and can they access it?  *E.g. A
-shared machine, DropBox, Google Drive, Cloud Storage.* 
+Does everyone on your team know where the data is?
+
+Can they access it?  
+
+Helpful to document this somewhere.
+
 
 ## Data Management
 
-Raw data is immutable^[The file cannot be changed after it is
-created]!
+Keep raw data, raw!
 
-Save intermediate data not just final - saves processing time if you
-have to redo one or a few steps.
+Save intermediate data not just final versions.
 
-Use consistent folder and file name patterns.
+Use consistent and descriptive folder and file name patterns.
 
 ```
 (base) nsidc-442-abarrett:data_strategies_for_a_future_us$ tree Data
@@ -114,54 +167,26 @@ Data
 7 directories, 0 files
 ```
 
-Setup config files to both document filepaths and patterns but also so
-your scripts can use these without hardcoding them into code.  
-
-```
-from pathlib import Path
-
-DATAPATH = Path.home() / path_to_project / Data
-RAW_DATA_PATH = DATAPATH / raw
-CLEANED_DATA_PATH = DATAPATH / cleaned
-FINAL_DATA_PATH = DATAPATH / final
-MONTHLY_PATH = DATAPATH / monthly_averages
-RESULTS_PATH = DATAPATH / results   # Path for final results tables
-                                    # and files
-FIGURES_PATH = DATAPATH / figures   # Path for plots etc.
-```
-
-In any script you can then do something like...
-```
-from filepaths import FINAL_DATA_PATH
-
-files = FINAL_DATA_PATH.glob('*')
-```
-
 ## Use standard file formats and include metadata
-It can take time to set up but it will save time in the long run.  
-Use metadata standards.
 
-### Common File Formats
  - GeoTIFF for imagery or 2D raster data   
  - NetCDF for multi-dimensional data (3D+)  
  - Shapefiles or GeoJSON for vector data  
- - csv for tabular data  (Make it *tidy*^[A framework for organising
- tabular data.  See [Wickham, 2014. *Tidy Data*](https://doi.org/10.18637/jss.v059.i10)])
+ - csv for tabular data.
 
-If you are working in the cloud, *C*loud *O*ptimized *F*ormats can
-help.
-Avoid Excel and proprietary formats.
+Avoid Excel and other proprietary formats.
 
 
 ## Metadata, metadata, metadata
-Metadata makes your  data to be interoperable and reusable.  
+Metadata makes your data **I**nteroperable and **R**eusable.  
 
 Metadata standards and conventions ensure that standard tools can
-read/interpret the data, and that there is a common
-reference/ontology^[A formal naming convention].  Not
-always perfect but worth following.
+read/interpret the data.
 
- - What is the CRS^[Coordinate Reference System] (projection, grid mapping) of the data?  
+Standards also define the meaning of metadata attributes.
+
+ - What is the Coordinate Reference System?  
+   (projection, grid mapping)
  - What are the units?  
  - What is the variable name?  
  - What is the source of the data?  
