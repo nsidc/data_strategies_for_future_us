@@ -103,12 +103,30 @@ digraph G {
         Model -> communicate;
         
 	communicate [shape=plaintext, label="Communicate"];
-        cloud [shape=plaintest, label="Cloud"];
+        cloud [shape=parallelogram, label="Cloud"];
 }
 ```
 ## What does this look like in the cloud?
 
-*Placeholder for examples of hybrid and cloud workflows*
+```{.python}
+import earthaccess
+
+auth = earthaccess.login(strategy='netrc')
+
+Query = earthaccess.granule_query().concept_id(
+    'C2153572614-NSIDC_CPRD'
+).temporal(
+    "2020-03-01", "2020-03-30"
+).bounding_box(
+    -134.7,58.9,-133.9,59.2)
+print(f"Found: {Query.hits()}")
+
+granules = Query.get(4)
+
+files = earthaccess.open(granules)
+ds = xr.open_dataset(files[1], group='/gt1l/land_ice_segments')
+ds
+```
 
 
 ## How to future-proof workflows and make them reproducible
