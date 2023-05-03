@@ -54,39 +54,7 @@ The scientific community.
  - Do you need to share data at each step or just an end product?  
 
 
-## Solutions
-```{dot -Tpng}
-digraph LocalWorkflow {
-  fontname="Helvetica,Arial,sans-serif"
-  cloud [image="images/cloud_image.png", label="EarthData Cloud"];
-  tidy [shape=plaintext, label="Tidy"];
-  transform [shape=plaintext, label="Transform"];
-  visualize [shape=plaintext, label="Visualize"];
-  model [shape=plaintext, label="Model"];
-  communicate [shape=plaintext, label="Communicate"];
-  
-  cloud -> tidy;
-
-  subgraph LaptopCluster {
-      label="Local Machine";
-      style=filled;
-      color=lightgrey;
-      tidy -> transform -> visualize -> model -> transform;
-  }
-      
-}
-```
-  
-Add cloud and other workflow diagrams
-
- - Download data to Local Machine and process locally
- - Do some processing in cloud to reduce data size
- - Do all of your processing in the cloud
-
-
 ## Workflow Solutions
-::::{.columns}
-:::{.column}
 
 ### Local
 
