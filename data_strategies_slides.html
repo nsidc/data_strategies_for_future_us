@@ -6,12 +6,12 @@
 <script src="data_strategies_slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="data_strategies_slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="data_strategies_slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="data_strategies_slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="data_strategies_slides_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.335">
 
-  <meta name="author" content="Andy P. Barrett">
-  <meta name="dcterms.date" content="2023-05-01">
-  <title>Data Strategies for a Future Us</title>
+  <meta name="author" content="Andy Barrett, National Snow and Ice Data Center">
+  <meta name="dcterms.date" content="2023-05-02">
+  <title>Data Strategies for Future Us</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="data_strategies_slides_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="data_strategies_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -319,95 +383,371 @@
       margin-right: 0; 
     }
   </style>
-  <script src="data_strategies_slides_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="data_strategies_slides_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="data_strategies_slides_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data Strategies for a Future Us</h1>
+  <h1 class="title">Data Strategies for Future Us</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Andy P. Barrett 
+Andy Barrett, National Snow and Ice Data Center 
 </div>
 </div>
 </div>
 
-  <p class="date">2023-05-01</p>
+  <p class="date">2023-05-02</p>
 </section>
 <section id="what-are-data-strategies" class="slide level2">
 <h2>What are Data Strategies?</h2>
-<p>I’m defining Data Strategies broadly to include workflows, and data management norms and best practices that enhance collaboration and reproducible science.</p>
-<p>Collaborating with a research team or the wider scientific community requires us to solve problems of data access and share knowledge about how data was analyzed. How do we make data available to others? Howa. do we document the processing steps? Can you remember how a dataset you processed last week was cleaned? If your computer crashes or get’s stolen could you reproduce your processing workflow easily? When it comes to submit a paper, finish a project, hand off to someone else on the team, or pick up a project after vacation; how easy is it to do this. Data strategies, used in this context, is a catchall term that includes where to process data (locally or on a remote system), how to document and manage data processing for a future you or others, how to make this data accessible to others, how to make the processing and analysis workflows reproducible.</p>
+<p>Data Strategies enhance collaboration and reproducible science.</p>
+<ul>
+<li>Workflows;<br>
+</li>
+<li>Data management best practices;<br>
+</li>
+<li>Documentation;</li>
+</ul>
+<p>Good to start from the beginning of a project, great to start from where you are now.</p>
 </section>
-<section id="who-is-a-future-us" class="slide level2">
-<h2>Who is a future us?</h2>
-<p>A future us is first and foremost, you tomorrow or next week when you pick up a project again, you next month when you discover you discover a problem with the data, or in siz months to a year from now when “reviewer 2” requests major changes. It is other members of your team who might want to work with the data and want to know where it came from and how it was processed. And it is the wider scientific community who may want to reproduce your work.</p>
+<section id="who-is-future-us" class="slide level2">
+<h2>Who is future us?</h2>
+<div class="columns">
+<div class="column">
+<p>You.</p>
+<p>Your team.</p>
+<p>The scientific community.</p>
+</div><div class="column">
+<p><img data-src="images/starwars-teamwork.png"></p>
+</div>
+</div>
 </section>
 <section id="a-simple-data-workflow" class="slide level2">
 <h2>A simple data workflow</h2>
-<div class="cell" data-reveal="true">
+
+<img data-src="images/data-science-workflow.png" class="r-stretch quarto-figure-center"><p class="caption">http://r4ds.hadley.nz/</p></section>
+<section id="when-to-cloud" class="slide level2">
+<h2>When to cloud?</h2>
+<ul>
+<li>What is the data volume?</li>
+<li>How long will it take to download?</li>
+<li>Can you store all that data (cost and space)?<br>
+</li>
+<li>Do you have the computing power for processing?<br>
+</li>
+<li>Does your team need a common computing environment?<br>
+</li>
+<li>Do you need to share data at each step or just an end product?</li>
+</ul>
+</section>
+<section id="workflow-solutions" class="slide level2">
+<h2>Workflow Solutions</h2>
+<h3 id="local">Local</h3>
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart TD
-    A["Collect Data
-    Field, Remote Sensing, Model"] --&gt;B[Clean Data\nCalibration, QC, Reprojection] --&gt;C[Aggregate\nTime or spatial means] --&gt;D[Analysis] --&gt;E[Make Plots and Tables] --&gt;F[Write Manuscript]
-    F-- Review --&gt;B
-    E-- Iterate--&gt;C
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
+<svg width="960" height="480" viewbox="0.00 0.00 314.83 457.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 453.6)">
+<title>
+G
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-453.6 310.83,-453.6 310.83,4 -4,4"></polygon> <g id="clust2" class="cluster">
+<title>
+cluster_0
+</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="105,-64 105,-356.8 209,-356.8 209,-64 105,-64"></polygon> <text text-anchor="middle" x="157" y="-340.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Local Machine</text> </g> <g id="clust1" class="cluster">
+<title>
+cluster_incloud
+</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="8,-364.8 8,-441.6 242,-441.6 242,-364.8 8,-364.8"></polygon> <text text-anchor="middle" x="125" y="-425" font-family="Helvetica,Arial,sans-serif" font-size="14.00">In Cloud</text> </g> <!-- communicate --> <g id="node1" class="node">
+<title>
+communicate
+</title>
+<text text-anchor="middle" x="160" y="-13.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Communicate</text> </g> <!-- cloud --> <g id="node2" class="node">
+<title>
+cloud
+</title>
+<polygon fill="none" stroke="black" points="233.66,-408.8 60.81,-408.8 16.34,-372.8 189.19,-372.8 233.66,-408.8"></polygon> <text text-anchor="middle" x="125" y="-386.6" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Earthdata Cloud</text> </g> <!-- Tidy --> <g id="node4" class="node">
+<title>
+Tidy
+</title>
+<polygon fill="white" stroke="transparent" points="184,-324 130,-324 130,-288 184,-288 184,-324"></polygon> <text text-anchor="middle" x="157" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Tidy</text> </g> <!-- cloud&#45;&gt;Tidy --> <g id="edge6" class="edge">
+<title>
+cloud-&gt;Tidy
+</title>
+<path fill="none" stroke="black" d="M131.63,-372.64C135.96,-361.43 141.71,-346.55 146.64,-333.8"></path> <polygon fill="black" stroke="black" points="150.04,-334.72 150.38,-324.13 143.51,-332.2 150.04,-334.72"></polygon> </g> <!-- daac --> <g id="node3" class="node">
+<title>
+daac
+</title>
+<path fill="none" stroke="black" d="M306.67,-405.53C306.67,-407.33 294.27,-408.8 279,-408.8 263.73,-408.8 251.33,-407.33 251.33,-405.53 251.33,-405.53 251.33,-376.07 251.33,-376.07 251.33,-374.27 263.73,-372.8 279,-372.8 294.27,-372.8 306.67,-374.27 306.67,-376.07 306.67,-376.07 306.67,-405.53 306.67,-405.53"></path> <path fill="none" stroke="black" d="M306.67,-405.53C306.67,-403.72 294.27,-402.25 279,-402.25 263.73,-402.25 251.33,-403.72 251.33,-405.53"></path> <text text-anchor="middle" x="279" y="-386.6" font-family="Helvetica,Arial,sans-serif" font-size="14.00">DAAC</text> </g> <!-- daac&#45;&gt;Tidy --> <g id="edge5" class="edge">
+<title>
+daac-&gt;Tidy
+</title>
+<path fill="none" stroke="black" d="M257.87,-373.43C253.96,-370.51 249.88,-367.53 246,-364.8 228.82,-352.74 209.31,-339.97 192.95,-329.51"></path> <polygon fill="black" stroke="black" points="194.53,-326.37 184.21,-323.95 190.77,-332.27 194.53,-326.37"></polygon> </g> <!-- Transform --> <g id="node5" class="node">
+<title>
+Transform
+</title>
+<polygon fill="white" stroke="transparent" points="194.59,-252 119.41,-252 119.41,-216 194.59,-216 194.59,-252"></polygon> <text text-anchor="middle" x="157" y="-229.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Transform</text> </g> <!-- Tidy&#45;&gt;Transform --> <g id="edge1" class="edge">
+<title>
+Tidy-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M157,-287.7C157,-279.98 157,-270.71 157,-262.11"></path> <polygon fill="black" stroke="black" points="160.5,-262.1 157,-252.1 153.5,-262.1 160.5,-262.1"></polygon> </g> <!-- Visualize --> <g id="node6" class="node">
+<title>
+Visualize
+</title>
+<polygon fill="white" stroke="transparent" points="181.37,-180 112.63,-180 112.63,-144 181.37,-144 181.37,-180"></polygon> <text text-anchor="middle" x="147" y="-157.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Visualize</text> </g> <!-- Transform&#45;&gt;Visualize --> <g id="edge2" class="edge">
+<title>
+Transform-&gt;Visualize
+</title>
+<path fill="none" stroke="black" d="M154.53,-215.7C153.43,-207.98 152.1,-198.71 150.87,-190.11"></path> <polygon fill="black" stroke="black" points="154.32,-189.51 149.44,-180.1 147.39,-190.5 154.32,-189.51"></polygon> </g> <!-- Model --> <g id="node7" class="node">
+<title>
+Model
+</title>
+<polygon fill="white" stroke="transparent" points="187,-108 133,-108 133,-72 187,-72 187,-108"></polygon> <text text-anchor="middle" x="160" y="-85.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Model</text> </g> <!-- Visualize&#45;&gt;Model --> <g id="edge3" class="edge">
+<title>
+Visualize-&gt;Model
+</title>
+<path fill="none" stroke="black" d="M150.21,-143.7C151.65,-135.98 153.37,-126.71 154.96,-118.11"></path> <polygon fill="black" stroke="black" points="158.44,-118.58 156.82,-108.1 151.56,-117.3 158.44,-118.58"></polygon> </g> <!-- Model&#45;&gt;communicate --> <g id="edge7" class="edge">
+<title>
+Model-&gt;communicate
+</title>
+<path fill="none" stroke="black" d="M160,-71.7C160,-63.98 160,-54.71 160,-46.11"></path> <polygon fill="black" stroke="black" points="163.5,-46.1 160,-36.1 156.5,-46.1 163.5,-46.1"></polygon> </g> <!-- Model&#45;&gt;Transform --> <g id="edge4" class="edge">
+<title>
+Model-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M172.73,-108.15C179.29,-118.08 186.61,-131.12 190,-144 194.08,-159.47 194.4,-164.62 190,-180 187.29,-189.49 182.33,-198.94 177.07,-207.17"></path> <polygon fill="black" stroke="black" points="174.08,-205.33 171.33,-215.57 179.86,-209.28 174.08,-205.33"></polygon> </g> </g>
+</svg>
+</p>
 </div>
 </div>
 </div>
 </section>
-<section id="collaborative-and-reproducible-workflows" class="slide level2">
-<h2>Collaborative and reproducible workflows</h2>
-<h3 id="where-to-process-data">Where to process data?</h3>
+<section id="workflow-solutions-1" class="slide level2">
+<h2>Workflow Solutions</h2>
+<h3 id="hybrid">Hybrid</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+<svg width="960" height="480" viewbox="0.00 0.00 370.00 449.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 445.6)">
+<title>
+G
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-445.6 366,-445.6 366,4 -4,4"></polygon> <g id="clust2" class="cluster">
+<title>
+cluster_local
+</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="8,-64 8,-356.8 112,-356.8 112,-64 8,-64"></polygon> <text text-anchor="middle" x="60" y="-340.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Local Machine</text> </g> <g id="clust1" class="cluster">
+<title>
+cluster_incloud
+</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="120,-280 120,-433.6 354,-433.6 354,-280 120,-280"></polygon> <text text-anchor="middle" x="237" y="-417" font-family="Helvetica,Arial,sans-serif" font-size="14.00">In Cloud</text> </g> <!-- communicate --> <g id="node1" class="node">
+<title>
+communicate
+</title>
+<text text-anchor="middle" x="63" y="-13.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Communicate</text> </g> <!-- cloud --> <g id="node2" class="node">
+<title>
+cloud
+</title>
+<polygon fill="none" stroke="black" points="345.66,-400.8 172.81,-400.8 128.34,-364.8 301.19,-364.8 345.66,-400.8"></polygon> <text text-anchor="middle" x="237" y="-378.6" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Earthdata Cloud</text> </g> <!-- tidy_cloud --> <g id="node4" class="node">
+<title>
+tidy_cloud
+</title>
+<polygon fill="white" stroke="transparent" points="223,-324 169,-324 169,-288 223,-288 223,-324"></polygon> <text text-anchor="middle" x="196" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Tidy</text> </g> <!-- cloud&#45;&gt;tidy_cloud --> <g id="edge1" class="edge">
+<title>
+cloud-&gt;tidy_cloud
+</title>
+<path fill="none" stroke="black" d="M227.49,-364.45C222.42,-355.2 216.07,-343.62 210.41,-333.29"></path> <polygon fill="black" stroke="black" points="213.33,-331.34 205.46,-324.25 207.2,-334.71 213.33,-331.34"></polygon> </g> <!-- daac --> <g id="node3" class="node">
+<title>
+daac
+</title>
+<path fill="none" stroke="black" d="M93.67,-397.53C93.67,-399.33 81.27,-400.8 66,-400.8 50.73,-400.8 38.33,-399.33 38.33,-397.53 38.33,-397.53 38.33,-368.07 38.33,-368.07 38.33,-366.27 50.73,-364.8 66,-364.8 81.27,-364.8 93.67,-366.27 93.67,-368.07 93.67,-368.07 93.67,-397.53 93.67,-397.53"></path> <path fill="none" stroke="black" d="M93.67,-397.53C93.67,-395.72 81.27,-394.25 66,-394.25 50.73,-394.25 38.33,-395.72 38.33,-397.53"></path> <text text-anchor="middle" x="66" y="-378.6" font-family="Helvetica,Arial,sans-serif" font-size="14.00">DAAC</text> </g> <!-- tidy_local --> <g id="node5" class="node">
+<title>
+tidy_local
+</title>
+<polygon fill="white" stroke="transparent" points="93,-324 39,-324 39,-288 93,-288 93,-324"></polygon> <text text-anchor="middle" x="66" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Tidy</text> </g> <!-- daac&#45;&gt;tidy_local --> <g id="edge6" class="edge">
+<title>
+daac-&gt;tidy_local
+</title>
+<path fill="none" stroke="black" d="M66,-364.45C66,-355.58 66,-344.56 66,-334.56"></path> <polygon fill="black" stroke="black" points="69.5,-334.25 66,-324.25 62.5,-334.25 69.5,-334.25"></polygon> </g> <!-- Transform --> <g id="node6" class="node">
+<title>
+Transform
+</title>
+<polygon fill="white" stroke="transparent" points="103.59,-252 28.41,-252 28.41,-216 103.59,-216 103.59,-252"></polygon> <text text-anchor="middle" x="66" y="-229.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Transform</text> </g> <!-- tidy_cloud&#45;&gt;Transform --> <g id="edge7" class="edge">
+<title>
+tidy_cloud-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M168.75,-290.33C150.8,-280.66 126.97,-267.83 106.78,-256.96"></path> <polygon fill="black" stroke="black" points="108.26,-253.78 97.8,-252.12 104.94,-259.94 108.26,-253.78"></polygon> </g> <!-- tidy_local&#45;&gt;Transform --> <g id="edge2" class="edge">
+<title>
+tidy_local-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M66,-287.7C66,-279.98 66,-270.71 66,-262.11"></path> <polygon fill="black" stroke="black" points="69.5,-262.1 66,-252.1 62.5,-262.1 69.5,-262.1"></polygon> </g> <!-- Visualize --> <g id="node7" class="node">
+<title>
+Visualize
+</title>
+<polygon fill="white" stroke="transparent" points="84.37,-180 15.63,-180 15.63,-144 84.37,-144 84.37,-180"></polygon> <text text-anchor="middle" x="50" y="-157.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Visualize</text> </g> <!-- Transform&#45;&gt;Visualize --> <g id="edge3" class="edge">
+<title>
+Transform-&gt;Visualize
+</title>
+<path fill="none" stroke="black" d="M62.04,-215.7C60.28,-207.98 58.16,-198.71 56.2,-190.11"></path> <polygon fill="black" stroke="black" points="59.55,-189.07 53.91,-180.1 52.73,-190.63 59.55,-189.07"></polygon> </g> <!-- Model --> <g id="node8" class="node">
+<title>
+Model
+</title>
+<polygon fill="white" stroke="transparent" points="90,-108 36,-108 36,-72 90,-72 90,-108"></polygon> <text text-anchor="middle" x="63" y="-85.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Model</text> </g> <!-- Visualize&#45;&gt;Model --> <g id="edge4" class="edge">
+<title>
+Visualize-&gt;Model
+</title>
+<path fill="none" stroke="black" d="M53.21,-143.7C54.65,-135.98 56.37,-126.71 57.96,-118.11"></path> <polygon fill="black" stroke="black" points="61.44,-118.58 59.82,-108.1 54.56,-117.3 61.44,-118.58"></polygon> </g> <!-- Model&#45;&gt;communicate --> <g id="edge8" class="edge">
+<title>
+Model-&gt;communicate
+</title>
+<path fill="none" stroke="black" d="M63,-71.7C63,-63.98 63,-54.71 63,-46.11"></path> <polygon fill="black" stroke="black" points="66.5,-46.1 63,-36.1 59.5,-46.1 66.5,-46.1"></polygon> </g> <!-- Model&#45;&gt;Transform --> <g id="edge5" class="edge">
+<title>
+Model-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M75.73,-108.15C82.29,-118.08 89.61,-131.12 93,-144 97.08,-159.47 96.73,-164.44 93,-180 90.79,-189.19 86.71,-198.59 82.38,-206.87"></path> <polygon fill="black" stroke="black" points="79.28,-205.23 77.47,-215.67 85.4,-208.64 79.28,-205.23"></polygon> </g> </g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="workflow-solutions-2" class="slide level2">
+<h2>Workflow Solutions</h2>
+<h3 id="all-in-cloud">All in cloud</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+<svg width="960" height="480" viewbox="0.00 0.00 314.83 444.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 440.8)">
+<title>
+G
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-440.8 310.83,-440.8 310.83,4 -4,4"></polygon> <g id="clust1" class="cluster">
+<title>
+cluster_incloud
+</title>
+<polygon fill="lightgrey" stroke="lightgrey" points="8,-64 8,-428.8 242,-428.8 242,-64 8,-64"></polygon> <text text-anchor="middle" x="125" y="-412.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">In Cloud</text> </g> <!-- communicate --> <g id="node1" class="node">
+<title>
+communicate
+</title>
+<text text-anchor="middle" x="159" y="-13.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Communicate</text> </g> <!-- cloud --> <g id="node2" class="node">
+<title>
+cloud
+</title>
+<polygon fill="none" stroke="black" points="233.66,-396 60.81,-396 16.34,-360 189.19,-360 233.66,-396"></polygon> <text text-anchor="middle" x="125" y="-373.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Earthdata Cloud</text> </g> <!-- tidy_cloud --> <g id="node4" class="node">
+<title>
+tidy_cloud
+</title>
+<polygon fill="white" stroke="transparent" points="187,-324 133,-324 133,-288 187,-288 187,-324"></polygon> <text text-anchor="middle" x="160" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Tidy</text> </g> <!-- cloud&#45;&gt;tidy_cloud --> <g id="edge1" class="edge">
+<title>
+cloud-&gt;tidy_cloud
+</title>
+<path fill="none" stroke="black" d="M133.65,-359.7C137.64,-351.73 142.45,-342.1 146.87,-333.26"></path> <polygon fill="black" stroke="black" points="150.11,-334.61 151.45,-324.1 143.85,-331.48 150.11,-334.61"></polygon> </g> <!-- daac --> <g id="node3" class="node">
+<title>
+daac
+</title>
+<path fill="none" stroke="black" d="M306.67,-392.73C306.67,-394.53 294.27,-396 279,-396 263.73,-396 251.33,-394.53 251.33,-392.73 251.33,-392.73 251.33,-363.27 251.33,-363.27 251.33,-361.47 263.73,-360 279,-360 294.27,-360 306.67,-361.47 306.67,-363.27 306.67,-363.27 306.67,-392.73 306.67,-392.73"></path> <path fill="none" stroke="black" d="M306.67,-392.73C306.67,-390.92 294.27,-389.45 279,-389.45 263.73,-389.45 251.33,-390.92 251.33,-392.73"></path> <text text-anchor="middle" x="279" y="-373.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">DAAC</text> </g> <!-- daac&#45;&gt;tidy_cloud --> <g id="edge6" class="edge">
+<title>
+daac-&gt;tidy_cloud
+</title>
+<path fill="none" stroke="black" d="M252.29,-361.29C235.72,-351.54 214.21,-338.89 196.13,-328.25"></path> <polygon fill="black" stroke="black" points="197.42,-324.95 187.03,-322.9 193.87,-330.99 197.42,-324.95"></polygon> </g> <!-- Transform --> <g id="node5" class="node">
+<title>
+Transform
+</title>
+<polygon fill="white" stroke="transparent" points="197.59,-252 122.41,-252 122.41,-216 197.59,-216 197.59,-252"></polygon> <text text-anchor="middle" x="160" y="-229.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Transform</text> </g> <!-- tidy_cloud&#45;&gt;Transform --> <g id="edge2" class="edge">
+<title>
+tidy_cloud-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M160,-287.7C160,-279.98 160,-270.71 160,-262.11"></path> <polygon fill="black" stroke="black" points="163.5,-262.1 160,-252.1 156.5,-262.1 163.5,-262.1"></polygon> </g> <!-- Visualize --> <g id="node6" class="node">
+<title>
+Visualize
+</title>
+<polygon fill="white" stroke="transparent" points="167.37,-180 98.63,-180 98.63,-144 167.37,-144 167.37,-180"></polygon> <text text-anchor="middle" x="133" y="-157.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Visualize</text> </g> <!-- Transform&#45;&gt;Visualize --> <g id="edge3" class="edge">
+<title>
+Transform-&gt;Visualize
+</title>
+<path fill="none" stroke="black" d="M153.33,-215.7C150.29,-207.81 146.62,-198.3 143.24,-189.55"></path> <polygon fill="black" stroke="black" points="146.46,-188.17 139.6,-180.1 139.93,-190.69 146.46,-188.17"></polygon> </g> <!-- Model --> <g id="node7" class="node">
+<title>
+Model
+</title>
+<polygon fill="white" stroke="transparent" points="186,-108 132,-108 132,-72 186,-72 186,-108"></polygon> <text text-anchor="middle" x="159" y="-85.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Model</text> </g> <!-- Visualize&#45;&gt;Model --> <g id="edge4" class="edge">
+<title>
+Visualize-&gt;Model
+</title>
+<path fill="none" stroke="black" d="M139.43,-143.7C142.36,-135.81 145.89,-126.3 149.14,-117.55"></path> <polygon fill="black" stroke="black" points="152.45,-118.7 152.65,-108.1 145.88,-116.26 152.45,-118.7"></polygon> </g> <!-- Model&#45;&gt;communicate --> <g id="edge7" class="edge">
+<title>
+Model-&gt;communicate
+</title>
+<path fill="none" stroke="black" d="M159,-71.7C159,-63.98 159,-54.71 159,-46.11"></path> <polygon fill="black" stroke="black" points="162.5,-46.1 159,-36.1 155.5,-46.1 162.5,-46.1"></polygon> </g> <!-- Model&#45;&gt;Transform --> <g id="edge5" class="edge">
+<title>
+Model-&gt;Transform
+</title>
+<path fill="none" stroke="black" d="M166.07,-108.33C169.84,-118.53 174.09,-131.78 176,-144 178.47,-159.81 178.34,-164.17 176,-180 174.72,-188.65 172.33,-197.85 169.78,-206.11"></path> <polygon fill="black" stroke="black" points="166.45,-205.04 166.65,-215.63 173.1,-207.22 166.45,-205.04"></polygon> </g> </g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="workflow-solutions-3" class="slide level2">
+<h2>Workflow Solutions</h2>
+<h3 id="use-cloud-based-services">Use Cloud-based Services</h3>
 <ul>
-<li>Download data to Local Machine and process locally</li>
-<li>Do some processing in cloud to reduce data size</li>
-<li>Do all of your processing in the cloud</li>
+<li><p>Cloud services are infrastructure, platforms and software hosted in the cloud and made available to users via an API, often accessed via a web interface.</p></li>
+<li><p>NASA’s Harmony (https://harmony.earthdata.nasa.gov/) can subset, reproject and reformat, and serve data.</p></li>
+<li><p>This might save processing steps.</p></li>
 </ul>
-<p>Depends on data volume:<br>
-- how long will it take to download (Mbps);<br>
-- Can you store all that data (cost and space);<br>
-- Do you have the computing power for processing;<br>
-- Does your team need a common computing environment;<br>
-- Do you need to share data at each step or just an end product.</p>
 </section>
 <section id="what-does-this-look-like-in-the-cloud" class="slide level2">
 <h2>What does this look like in the cloud?</h2>
-<p><em>Placeholder for examples of hybrid and cloud workflows</em></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> earthaccess</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>auth <span class="op">=</span> earthaccess.login(strategy<span class="op">=</span><span class="st">'netrc'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>Query <span class="op">=</span> earthaccess.granule_query().concept_id(</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="st">'C2153572614-NSIDC_CPRD'</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>).temporal(</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="st">"2020-03-01"</span>, <span class="st">"2020-03-30"</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>).bounding_box(</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="op">-</span><span class="fl">134.7</span>,<span class="fl">58.9</span>,<span class="op">-</span><span class="fl">133.9</span>,<span class="fl">59.2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>granules <span class="op">=</span> Query.get(<span class="dv">4</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>files <span class="op">=</span> earthaccess.<span class="bu">open</span>(granules)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>ds <span class="op">=</span> xr.open_dataset(files[<span class="dv">1</span>], group<span class="op">=</span><span class="st">'/gt1l/land_ice_segments'</span>)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>ds</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># Start to do awesome science</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-future-proof-workflows-and-make-them-reproducible" class="slide level2">
 <h2>How to future-proof workflows and make them reproducible</h2>
-<p><strong>FAIR</strong> - <strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable applies to the future you and your tean as well.</p>
-</section>
-<section id="document-the-analysis" class="slide level2">
-<h2>Document the Analysis</h2>
-<p>Document each step. Where did you get the data, which files, which version. Write it down. Anywhere is good but using a script is better. Example: <code>earthaccess</code>, <code>wget</code> or <code>curl</code></p>
-<p>Can you (or anyone else) easily reproduce your processing pipeline. Having it scripted so just a few commands can set the process going is really helpful.</p>
-<p>How can this be done with GUI interfaces? E.g. ArcGIS, QGIS, Excel - screenshots, journal commands.</p>
+<p><strong>FAIR</strong></p>
+<ul>
+<li><strong>F</strong>indable,</li>
+<li><strong>A</strong>ccessible,</li>
+<li><strong>I</strong>nteroperable,</li>
+<li><strong>R</strong>eusable</li>
+</ul>
+<p>Applies to the future you and your team as well.</p>
 </section>
 <section id="make-sure-data-are-findable-and-accessible" class="slide level2">
 <h2>Make sure data are <strong>F</strong>indable and <strong>A</strong>ccessible</h2>
-<p>Does everyone know where you data is and can they access it? <em>E.g. A shared machine, DropBox, Google Drive, Cloud Storage.</em></p>
+<p>Does everyone on your team know where the data is?</p>
+<p>Can they access it?</p>
+<p>Helpful to document this somewhere.</p>
 </section>
 <section id="data-management" class="slide level2">
 <h2>Data Management</h2>
-<p>Raw data is immutable<sup>1</sup>!</p>
-<p>Save intermediate data not just final - saves processing time if you have to redo one or a few steps.</p>
-<p>Use consistent folder and file name patterns.</p>
+<p>Keep raw data, raw!</p>
+<p>Save intermediate data not just final versions.</p>
+<p>Use consistent and descriptive folder and file name patterns.</p>
 <pre><code>(base) nsidc-442-abarrett:data_strategies_for_a_future_us$ tree Data
 Data
 ├── calibrated
@@ -419,27 +759,9 @@ Data
 └── results
 
 7 directories, 0 files</code></pre>
-<p>Setup config files to both document filepaths and patterns but also so your scripts can use these without hardcoding them into code.</p>
-<pre><code>from pathlib import Path
-
-DATAPATH = Path.home() / path_to_project / Data
-RAW_DATA_PATH = DATAPATH / raw
-CLEANED_DATA_PATH = DATAPATH / cleaned
-FINAL_DATA_PATH = DATAPATH / final
-MONTHLY_PATH = DATAPATH / monthly_averages
-RESULTS_PATH = DATAPATH / results   # Path for final results tables
-                                    # and files
-FIGURES_PATH = DATAPATH / figures   # Path for plots etc.</code></pre>
-<p>In any script you can then do something like…</p>
-<pre><code>from filepaths import FINAL_DATA_PATH
-
-files = FINAL_DATA_PATH.glob('*')</code></pre>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>The file cannot be changed after it is created</p></li></ol></aside></section>
-<section id="use-standard-file-formats-and-include-metadata" class="slide level2">
-<h2>Use standard file formats and include metadata</h2>
-<p>It can take time to set up but it will save time in the long run.<br>
-Use metadata standards.</p>
-<h3 id="common-file-formats">Common File Formats</h3>
+</section>
+<section id="standard-file-formats-make-data-interoperable" class="slide level2">
+<h2>Standard file formats make data <strong>I</strong>nteroperable</h2>
 <ul>
 <li>GeoTIFF for imagery or 2D raster data<br>
 </li>
@@ -447,17 +769,17 @@ Use metadata standards.</p>
 </li>
 <li>Shapefiles or GeoJSON for vector data<br>
 </li>
-<li>csv for tabular data (Make it <em>tidy</em><sup>1</sup>)</li>
+<li>csv for tabular data.</li>
 </ul>
-<p>If you are working in the cloud, <em>C</em>loud <em>O</em>ptimized <em>F</em>ormats can help. Avoid Excel and proprietary formats.</p>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>A framework for organising tabular data. See <a href="https://doi.org/10.18637/jss.v059.i10">Wickham, 2014. <em>Tidy Data</em></a></p></li></ol></aside></section>
-<section id="metadata-metadata-metadata" class="slide level2">
-<h2>Metadata, metadata, metadata</h2>
-<p>Metadata makes your data to be interoperable and reusable.</p>
-<p>Metadata standards and conventions ensure that standard tools can read/interpret the data, and that there is a common reference/ontology<sup>1</sup>. Not always perfect but worth following.</p>
+<p>Avoid Excel and other proprietary formats.</p>
+</section>
+<section id="metadata-makes-data-interoperable-and-reusable." class="slide level2">
+<h2>Metadata makes data <strong>I</strong>nteroperable and <strong>R</strong>eusable.</h2>
+<p>Metadata standards and conventions ensure that standard tools can read/interpret the data.</p>
+<p>Standards also define the meaning of metadata attributes.</p>
 <ul>
-<li>What is the CRS<sup>2</sup> (projection, grid mapping) of the data?<br>
-</li>
+<li>What is the Coordinate Reference System?<br>
+(projection, grid mapping)</li>
 <li>What are the units?<br>
 </li>
 <li>What is the variable name?<br>
@@ -466,11 +788,20 @@ Use metadata standards.</p>
 </li>
 <li>What script produced the data?</li>
 </ul>
+</section>
+<section id="document-the-analysis" class="slide level2">
+<h2>Document the Analysis</h2>
+<p>Document each step.</p>
+<ul>
+<li>Where did you get the data, which files, which version?</li>
+<li>Write it down. Anywhere is good but using a script is better.</li>
+</ul>
+<p>Can you (or anyone else) easily reproduce your processing pipeline?</p>
+<p>With GUI interfaces - e.g.&nbsp;ArcGIS, QGIS, Excel - use screenshots, journal commands.</p>
 <div class="footer footer-default">
 
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>A formal naming convention</p></li><li id="fn4"><p>Coordinate Reference System</p></li></ol></aside></section>
-
+</section>
     </div>
   </div>
 
