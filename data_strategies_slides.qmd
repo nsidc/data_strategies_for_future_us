@@ -1,12 +1,12 @@
 ---
-title: "Data Strategies for a Future Us"
-author: "Andy P. Barrett, National Snow and Ice Data Center"
+title: "Data Strategies for Future Us"
+author: "Andy P. Barrett,\n National Snow and Ice Data Center"
 date: last-modified
 date-format: iso
 format:
     revealjs:
         colorlinks: true
-        theme: dark
+        theme: night
         
 ---
 
