@@ -1,6 +1,6 @@
 ---
 title: "Data Strategies for Future Us"
-author: "Andy P. Barrett,\n National Snow and Ice Data Center"
+author: "Andy Barrett,\n National Snow and Ice Data Center"
 date: last-modified
 date-format: iso
 format:
@@ -21,7 +21,7 @@ Data Strategies enhance collaboration and reproducible science.
 
 
 Good to start from the beginning of a project, great to start
-from where you now.
+from where you are now.
 
 
 ## Who is future us?
@@ -68,6 +68,13 @@ digraph G {
         cloud [shape=parallelogram, label="Earthdata Cloud"];
         daac [shape=cylinder, label="DAAC"]
 
+        subgraph cluster_incloud {
+                style=filled;
+                color=lightgrey;
+                cloud;
+                label="In Cloud";
+         }
+
         subgraph cluster_0 {
 		style=filled;
 		color=lightgrey;
@@ -77,13 +84,13 @@ digraph G {
 	}
 
         daac -> Tidy
-        cloud -> Tidy [label="Import", labelfloat=true];
+        cloud -> Tidy
         Model -> communicate;
         
 }
 ```
-:::
-:::{.column}
+
+## Workflow Solutions
 
 ### Hybrid
 
@@ -110,7 +117,7 @@ digraph G {
 		color=lightgrey;
 		node [shape=plaintext, style=filled,color=white];
                 tidy_local [shape=plaintext, label="Tidy", style=filled,color=white];
-		Transform -> Visualize -> Model -> Transform;
+		tidy_local -> Transform -> Visualize -> Model -> Transform;
 		label = "Local Machine";
 	}
 
@@ -120,8 +127,49 @@ digraph G {
         
 }
 ```
-:::
-::::
+
+## Workflow Solutions
+
+### All in cloud
+
+```{dot}
+digraph G {
+	fontname="Helvetica,Arial,sans-serif"
+	node [fontname="Helvetica,Arial,sans-serif"]
+	edge [fontname="Helvetica,Arial,sans-serif"]
+
+	communicate [shape=plaintext, label="Communicate"];
+        cloud [shape=parallelogram, label="Earthdata Cloud"];
+        daac [shape=cylinder, label="DAAC"]
+
+        subgraph cluster_incloud {
+                style=filled;
+                color=lightgrey;
+		tidy_cloud [shape=plaintext, label="Tidy", style=filled,color=white];
+		node [shape=plaintext, style=filled,color=white];
+		cloud -> tidy_cloud -> Transform -> Visualize -> Model -> Transform;
+                label="In Cloud";
+        }
+        
+        daac -> tidy_cloud;
+        Model -> communicate;
+        
+}
+```
+
+## Workflow Solutions
+
+### Use Cloud-based Services
+
+ - Cloud services are infrastructure, platforms and software hosted in
+the cloud and made available to users via an API, often accessed via
+a web interface. 
+
+ - NASA's Harmony (https://harmony.earthdata.nasa.gov/) can subset,
+reproject and reformat, and serve data.
+
+ - This might save processing steps.
+
 
 ## What does this look like in the cloud?
 
@@ -136,13 +184,14 @@ Query = earthaccess.granule_query().concept_id(
     "2020-03-01", "2020-03-30"
 ).bounding_box(
     -134.7,58.9,-133.9,59.2)
-print(f"Found: {Query.hits()}")
 
 granules = Query.get(4)
 
 files = earthaccess.open(granules)
 ds = xr.open_dataset(files[1], group='/gt1l/land_ice_segments')
 ds
+
+# Start to do awesome science
 ```
 
 
