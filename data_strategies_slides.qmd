@@ -36,12 +36,12 @@ The scientific community.
 :::  
 
 ::: {.column}
-![](images/starwars-teamwork.png)
+![](images/horst-starwars-teamwork.png)
 :::
 ::::
 
 ## A simple data workflow
-![http://r4ds.hadley.nz/](images/data-science-workflow.png)
+![http://r4ds.hadley.nz/](images/wickham-data-science-workflow.png)
 
 
 ## When to cloud?

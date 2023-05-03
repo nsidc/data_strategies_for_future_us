@@ -3,11 +3,11 @@
 </p>
 
 
-# Data Strategies for a Future Us
+# Data Strategies for Future Us
 
-Data Strategies for a Future Us is a guide for scientists on how to document, organize and manage data processing workflows.
+Data Strategies for Future Us is a guide for scientists on how to document, organize and manage data processing workflows.
 
-[Data Strategies for a Future Us](summary.html)
+[Data Strategies for Future Us](data_strategies_slides.html)
 
 ## Level of Support
 
