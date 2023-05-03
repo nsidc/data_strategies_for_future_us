@@ -84,14 +84,23 @@ Add cloud and other workflow diagrams
  - Do all of your processing in the cloud
 
 
-## Test Diagram
+## Workflow Solutions
+::::{.columns}
+:::{.column}
+
+### Local
+
 ```{dot}
 digraph G {
 	fontname="Helvetica,Arial,sans-serif"
 	node [fontname="Helvetica,Arial,sans-serif"]
 	edge [fontname="Helvetica,Arial,sans-serif"]
 
-	subgraph cluster_0 {
+	communicate [shape=plaintext, label="Communicate"];
+        cloud [shape=parallelogram, label="Earthdata Cloud"];
+        daac [shape=cylinder, label="DAAC"]
+
+        subgraph cluster_0 {
 		style=filled;
 		color=lightgrey;
 		node [shape=plaintext, style=filled,color=white];
@@ -99,13 +108,53 @@ digraph G {
 		label = "Local Machine";
 	}
 
+        daac -> Tidy
         cloud -> Tidy [label="Import", labelfloat=true];
         Model -> communicate;
         
-	communicate [shape=plaintext, label="Communicate"];
-        cloud [shape=parallelogram, label="Cloud"];
 }
 ```
+:::
+:::{.column}
+
+### Hybrid
+
+```{dot}
+digraph G {
+	fontname="Helvetica,Arial,sans-serif"
+	node [fontname="Helvetica,Arial,sans-serif"]
+	edge [fontname="Helvetica,Arial,sans-serif"]
+
+	communicate [shape=plaintext, label="Communicate"];
+        cloud [shape=parallelogram, label="Earthdata Cloud"];
+        daac [shape=cylinder, label="DAAC"]
+
+        subgraph cluster_incloud {
+                style=filled;
+                color=lightgrey;
+		tidy_cloud [shape=plaintext, label="Tidy", style=filled,color=white];
+                cloud -> tidy_cloud;
+                label="In Cloud";
+        }
+        
+        subgraph cluster_local {
+		style=filled;
+		color=lightgrey;
+		node [shape=plaintext, style=filled,color=white];
+                tidy_local [shape=plaintext, label="Tidy", style=filled,color=white];
+		Transform -> Visualize -> Model -> Transform;
+		label = "Local Machine";
+	}
+
+        daac -> tidy_local;
+        tidy_cloud -> Transform
+        Model -> communicate;
+        
+}
+```
+:::
+::::
+
 ## What does this look like in the cloud?
 
 ```{.python}
