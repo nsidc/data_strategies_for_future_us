@@ -123,19 +123,6 @@ digraph G {
 Applies to the future you and your team as well.
 
 
-## Document the Analysis
-
-Document each step.
-
- - Where did you get the data, which files, which version?
- - Write it down.  Anywhere is good but using a script is better.
-   Example: `earthaccess`, `wget` or `curl`
-
-Can you (or anyone else) easily reproduce your processing pipeline?
-
-With GUI interfaces - e.g. ArcGIS, QGIS, Excel - use screenshots, journal commands.
-
-
 ## Make sure data are **F**indable and **A**ccessible
 
 Does everyone on your team know where the data is?
@@ -192,3 +179,14 @@ Standards also define the meaning of metadata attributes.
  - What is the source of the data?  
  - What script produced the data?  
 
+
+## Document the Analysis
+
+Document each step.
+
+ - Where did you get the data, which files, which version?
+ - Write it down.  Anywhere is good but using a script is better.
+
+Can you (or anyone else) easily reproduce your processing pipeline?
+
+With GUI interfaces - e.g. ArcGIS, QGIS, Excel - use screenshots, journal commands.
