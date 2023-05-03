@@ -154,7 +154,7 @@ Data
 7 directories, 0 files
 ```
 
-## Use standard file formats and include metadata
+## Standard file formats make data **I**nteroperable
 
  - GeoTIFF for imagery or 2D raster data   
  - NetCDF for multi-dimensional data (3D+)  
@@ -164,8 +164,7 @@ Data
 Avoid Excel and other proprietary formats.
 
 
-## Metadata, metadata, metadata
-Metadata makes your data **I**nteroperable and **R**eusable.  
+## Metadata makes data **I**nteroperable and **R**eusable.  
 
 Metadata standards and conventions ensure that standard tools can
 read/interpret the data.
