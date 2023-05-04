@@ -1,0 +1,14 @@
+name: data-strategies-for-future-us
+channels:
+ - conda-forge
+ - default
+dependencies:
+ - python ~=3.10
+
+ ###################################################
+ # Imported dependencies and extensions            #
+ ###################################################
+
+ - jupyterlab
+ - earthaccess
+ - diagrams
