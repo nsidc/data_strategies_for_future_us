@@ -7,7 +7,7 @@ format:
     revealjs:
         colorlinks: true
         theme: night
-        
+        slide-number: c/t
 ---
 
 ## What are Data Strategies?
