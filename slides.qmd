@@ -8,6 +8,9 @@ format:
         colorlinks: true
         theme: night
         slide-number: c/t
+# Handle redirect from the old URL
+aliases:
+  - "data_strategies_slides.html"
 ---
 
 ## What are Data Strategies?
