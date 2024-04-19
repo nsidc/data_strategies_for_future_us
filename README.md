@@ -9,6 +9,7 @@ Data Strategies for Future Us is a guide for scientists on how to document, orga
 
 [Data Strategies for Future Us](data_strategies_slides.html)
 
+
 ## Level of Support
 
 * This repository is not actively supported by NSIDC but we welcome issue submissions and
@@ -21,6 +22,16 @@ nsidc@nsidc.org for more information.
 ## Contributing
 
 This is a living document.  If you see typos, errors and have suggestions for improvements create an issue.  PRs welcome.
+
+
+### Previewing the site locally
+
+This site is rendered by Quarto. You can use RStudio or
+[install Quarto](https://quarto.org/docs/get-started/) and run:
+
+```
+quarto preview
+```
 
 
 ## License
