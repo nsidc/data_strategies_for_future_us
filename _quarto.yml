@@ -1,0 +1,37 @@
+project:
+  title: "Data Strategies for Future Us"
+  type: "website"
+
+
+website:
+  title: "Data Strategies for Future Us"
+  site-url: "https://nsidc.github.io/data_strategies_for_future_us/"
+  # site-path: "/data_strategies_for_future_us"  # Do we need this?
+
+  repo-url: &repo-url "https://github.com/nsidc/data_strategies_for_future_us"
+  repo-actions: ["edit", "issue"]
+
+  navbar:
+    left:
+      - text: "Slides"
+        file: "slides.qmd"
+    right:
+      - icon: "github"
+        aria-label: "GitHub"
+        href: *repo-url
+
+
+  page-footer:
+    left: "Built with [Quarto](https://quarto.org/) ❤️"
+    right:
+      - text: "Code of Conduct"
+        href: "CODE_OF_CONDUCT.md"
+      - text: "License"
+        href: "LICENSE"
+
+
+format:
+  html:
+    theme: "cosmo"
+    toc: true
+    from: "markdown+emoji"
